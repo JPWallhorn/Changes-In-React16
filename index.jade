@@ -17,7 +17,7 @@ html
       section.slides.layout-regular.template-default
 
         article.first
-          h1: mark Introduction<br><br>into React!
+          h1: mark Changes in React 16!
         article
           h1: mark Hi, I'm JP Wallhorn
           p: br
@@ -52,18 +52,24 @@ html
           h2 Implemented React.JS<br>E-Commerce Platform<br>(With focus on SEO)
 
         article
-          h1 Let us talk about<br>ReactJS
+          h1 Let us talk about<br>changes in ReactJS 16
+
+        article
+          h2 These are not all changes<br>Just some highlights
+          p Check out their blog<br>for the full changelog
 
         article
           h1 This is the roadmap   
 
         article
           .grid
-            .item What? Why? How?
-            .item Foundation
-            .item State Management
-            .item Create React App
-            .item Ressources
+            .item Context API
+            .item Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item Memo
+            .item Lazy
+            .item contextType
 
         article
           h1 READY?!
@@ -71,336 +77,396 @@ html
 
         article
           .grid
-            .item.current What? Why? How?
-            .item Foundation
-            .item State Management
-            .item Create React App
-            .item Ressources
+            .item.current Context API
+            .item Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item Memo
+            .item Lazy
+            .item contextType
 
         article
           h1 What is it?
-          p.sub It's not a framework
+          p.sub It doesn't replace Redux
 
         article
-          h1 JavaScript Library
-          p.sub With a rich community
-
-        article
-          h2 Handling the View(MVC)<br>User Interface
-
-        article 
-          h1 HTML in JavaScript
-          p.sub 1st doing it this way
-
-        article
-          h1 JSX Support
-          p.sub JSX produces React “elements”
-
-        article
-          h2 "Allows you to use<br>variables within<br>HTML code"
-
-        article
-          h2 All files are getting<br>compiled into one bundle<br>that is getting served<br>to the client
-          p.sub The client renders the<br>JavaScript and puts out HTML
-
-        article
-          h1 Used to build complex and modern UIs
-
-        article
-          h1 Component Based Structure
-        
-        article
-          img(src='/images/components.png')
-
-        article 
-          img(src='/images/Udemy.png')
-
-        article 
-          h1 App with<br>simple component 
-
-        article
-          img(src='./images/screenshots/person-component.png')
-          a(href='https://www.syntx.io/?utm_source=intro_into_react') Sandbox
-
-        article 
-          h1 Stateful Component
-
-        article
-          img(src='./images/screenshots/stateful-component.png')
-          a(href='https://reactjs.org/') ReactJS Live Demo
-
-        article
-          h1 Component
-          p.sub with external
-          h1 plugins
-
-        article 
-          img(src='./images/screenshots/component-external-class.png')
-
-        article
-          .grid
-            .item What? Why? How?
-            .item.current Foundation
-            .item State Management
-            .item Create React App
-            .item Ressources
-
-        article 
-          h1 Foundation
-          p.sub Consists of pages, components<br>and containers
-
-        article 
-          h1 Page,<br>Component,<br>Container
-
-        article
-          h1 Page
-          p.sub A page contains<br>containers and components
-
-        article
-          h1 Component
-          p.sub It represents a small visual<br>block within a page.
-        
-        article 
-          h2 Breaks up dependencies
-          h2 Re-usable
-          h2 Stateless
-          p.sub (Dumb Component)
-
-        article 
-          h1 Container
-          p.sub A stateful component
+          h1 Share data between components
+          p.sub Without explicitly passing it
 
         article
           h1 What does<br>that mean?
-
-        article
-          h1 Concerned<br>how things<br>work
-
-        article
-          h1 Provide data<br>to the<br>behaviour
-
-        article 
-          h1 Detailed Comparison
-          a(href='https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0') Medium Article by Dan Abramov
-
-        article
-          h1 Folder Structure
-
-        article
-          img(src='./images/screenshots/folder-structure.png')
-
-        article 
-          h1 Props
-          p.sub Allows you to pass data from parent<br>(wrapping) component
-
-        article 
-          img(src='./images/screenshots/person-component.png')
-
-        article 
-          p.sub Triggers UI to
-          h1 re-render
-          p.sub when changed
-
-        article
-          h1 State
-          p.sub State is used to change the component<br>from within rather than by parent
-          p.sub Also triggers re-rendering
-
-        article
-          img(src='./images/screenshots/stateful-component.png')
-
-        article 
-          h1 Manipulating the state
         
         article 
-          img(src='./images/screenshots/state-manipulation.png')
+          h1 It's a global object
+          p.sub To your React Components
 
         article
-          h1 What is this<br>re-rendering all about?
+          h1 Why do we<br>need it?
+          p.sub So we avoid props drilling
 
         article
-          h1 Here's your<br>new ...
+          h2 Music Player Example
+          img(src='./images/screenshots/React_Tree.jpeg')
+          a(href='https://blog.bitsrc.io/why-you-should-consider-the-new-context-api-in-react-a-deep-dive-d588b66c57b5') Credit
+
+        article
+          h2 Normally you would<br>pass props to each<br>component
+
+        article
+          h1 It's painful
 
         article 
-          h1 Wallpaper
-          p.sub What's going on???
-          p.sub Let me show you
-
-        article
-          h1 Component Lifeycle
+          h1 This is the
+          h1: mark Context API
+          h1 in action
 
         article 
-          img(src='./images/component-lifeycle.jpeg') 
-          a(href='https://twitter.com/dceddia') Credits
-
-        article
-          h1 React is a<br>Single Page Application
+          img(src='./images/screenshots/React_Tree_Props_Each_Level.jpeg')
+          a(href='https://blog.bitsrc.io/why-you-should-consider-the-new-context-api-in-react-a-deep-dive-d588b66c57b5') Credit
 
         article 
-          h1 But ... ?
-
-        article 
-          h1 React can
-          p.sub also be a
-          h1 Multi Page Application
+          h1 That's<br>fantastic
+          p.sub But how do we implement this? 
+          p.sub Is the implementation complicated?
 
         article
-          h1 React Router
-          p.sub Client-Side Routing
+          h1: mark It's easy!
+
+        article
+          h1 You will need<br>3 things
+
+        article
+          h1 Context
+          h1 Provider
+          h1 Consumer
+
+        article
+          h1 Context
+
+        article
+          img(src='./images/screenshots/Context.png')
+
+        article
+          p.sub FYI - You can create
+          h1 Multiple Contexts
+
+        article
+          h1 Provider
+          p.sub Needs to be higher in the tree than consumers
+
+        article 
+          img(src='./images/screenshots/Provider.png')
+
+        article
+          h1 Consumer
+          p.sub Requires function as a child that returns JSX
+
+        article
+          h1 Make sure you import the Context
+        
+        article
+          img(src='./images/screenshots/Consumer.png')
+
+        article
+          h1 All in One
+          p.sub ReactJS Official Example
+        
+        article
+          img(src='./images/screenshots/Context-API.png')
+
+        article
+          h1 That's it! 
+          p.sub Should you implement it right away<br>for everything?
+
+        article
+          h1: mark No! 
+
+        article
+          h2 It's good for medium sized applications
+
+        article 
+          h2 Good Use Cases:
+          p Multi Theme Projects
+          p Multi Language Projects
+
+        article
+          h2 You are creating outside dependencies with this
+          p Just make sure to keep that in mind
 
         article
           .grid
-            .item What? Why? How?
-            .item Foundation
-            .item.current State Management
-            .item Create React App
-            .item Ressources
+            .item Context API
+            .item.current Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item Memo
+            .item Lazy
+            .item contextType
 
         article
-          h1 Multiple Options
-          p.sub Per usual
-
-        article 
-          h1 Flux
-          p.sub The default library by Facebook
+          h1 Simple Component
+          p.sub This is not a problem and straight forward
 
         article
-          h1 But then<br>there is ...
-
-        article 
-          h1 Redux
-          p.sub Pretty much the final enemy
+          img(src='./images/screenshots/Simple_Component.png')
         
         article 
-          h1 Architecture
-
-        article 
-          img(src='./images/screenshots/redux-architecture.jpg')
+          h2 Return multiple elements<br>from a component
 
         article
-          h1 Redux vs Flux
-          a(href='https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux') stackoverflow
-
-        article 
-          img(src='./images/screenshots/flux-vs-redux.png')
+          img(src='./images/screenshots/Simple_Component_error.png')
 
         article
-          h1 Context API
-          p.sub The new kid on the block<br>to avoid props drilling
+          h1 Now this happens ...
+
+        article
+          img(src='./images/screenshots/Error_Message.png')
+
+        article 
+          h1 What just happened?
+
+        article 
+          h2 As you know,<br>you have to <br>wrap it into a div
+          p Just like this
+        
+        article 
+          img(src='./images/screenshots/Simple_Component_DIV.png')
+
+        article
+          h1 DIV, DIV, DIV
+          p.sub This is not ideal
+
+        article
+          p.sub Welcome to
+          h1 Fragments
+
+        article
+          img(src='./images/screenshots/Simple_Component_Fragment.png')
 
         article
           .grid
-            .item What? Why? How?
-            .item Foundation
-            .item State Management
-            .item.current Create React App
-            .item Ressources
+            .item Context API
+            .item Fragments
+            .item.current Error Boundaries
+            .item Portals 
+            .item Memo
+            .item Lazy
+            .item contextType
+
+        article
+          p.sub Previously, runtime errors during rendering
+          h1 Broke your<br>App
+
+        article
+          h2 You had to refresh<br>the whole application
 
         article 
-          h1 Create<br>React<br>App
-          p.sub Worry-free starter pack
-          a(href='https://github.com/facebook/create-react-app') GitHub
+          h2 By default, React 16 will<br>just unmount the tree<br>and doesn't display<br>the code
+
+        article
+          h1 That's not<br>ideal either but...
 
         article 
-          h1 Easy installation
-        
-        article 
-          img(src='./images/create-react-app.svg')
+          h1 New Lifecycle Method
+          p.sub Kind of like Try, Catch
 
         article
-          h1 Structure
+          h2 ComponentDidCatch
+          p.sub (error, info)
 
         article
-          img(src='./images/screenshots/create-react-app-folder-structure.png')
-
-        article
-          h2 You are lucky<br>Version 2 just<br>got released
-
-        article
-          img(src='./images/screenshots/create-react-app-features.png')
-
-        article
-          h1 Newest Additions
-
-        article
-          h2 CSS and SASS Modules 
-          p.sub Really excited about this one
-
-        article
-          h1 Some other additions
+          img(src='./images/screenshots/ComponentDidCatch.png')
 
         article 
-          ul.build
-            li Babel 7 
-            li Webpack 4
-            li Jest 23
-            li Import SVG as React Component
-
-        article 
-          h1 Why worry-free?
+          h1 Catch Block
+          p.sub for 
+          h1 Components
+          a(href='https://codepen.io/gaearon/pen/wqvxGa?editors=0010') Sandbox
 
         article
-          h2 No webpack<br>configuration needed
-          p.sub Let me explain what webpack is
-        
-        article
-          h1 Webpack
-          p.sub Personally, love everything they do
+          h1 Error Component
+          p.sub Recommended way to implement this
 
         article
-          h2 Compiles your<br>JavaScript code
+          img(src='./images/screenshots/ErrorBoundary.png')
 
         article
-          img(src='./images/screenshots/webpack.png')
-          p.sub Serves those bundles to the clients
-
-        article 
-          h1 You want<br>more?
-          p.sub Especially needed for bigger projects
+          h2 Then you can use that<br>within your app
 
         article
-          h1 Eject
-          p.sub WARNING! Can not be un-done
+          img(src='./images/screenshots/ErrorBoundary_Usafge.png')
 
         article
-          ul.build
-            li In charge of dependencies 
-            li Opens up webpack configuration
+          h1 Catch Errors<br>in Product
+
+        article
+          img(src='./images/screenshots/Product.png')
 
         article
           .grid
-            .item What? Why? How?
-            .item Foundation
-            .item State Management
-            .item Create React App
-            .item.current Ressources
+            .item Context API
+            .item Fragments
+            .item Error Boundaries
+            .item.current Portals 
+            .item Memo
+            .item Lazy
+            .item contextType
 
         article
-          h1 Learning by doing
-          p.sub Start typing already
+          h1 Not every website uses React
 
         article
-          h1 Udemy<br>Course
-          a(href='https://www.udemy.com/react-the-complete-guide-incl-redux/') React Complete Guide by Maximilian
+          h1 Now parts of<br>it can be<br>React
+          p.sub For example: usage within CMS applications
 
         article
-          h1 ReactJS
-          a(href='https://reactjs.org/') Official Website
+          h2 Portals let you render a<br>bit of React-controlled<br>DOM outside of the parent<br>component
+
+        article
+          h1 Render DOM outside of parent
+
+        article
+          img(src='./images/screenshots/Portal.png')
+          a(href='https://codepen.io/davidgilbertson/pen/xPVMqp') Sandbox
+
+        article
+          .grid
+            .item Context API
+            .item Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item.current Memo
+            .item Lazy
+            .item contextType
+
+        article
+          h1 Hot stuff! 
+          p.sub Just got released!
+
+        article
+          h2 similar to
+          h2 React.PureComponent
+
+        article
+          h1 But for<br>classes
+          p.sub Remind me. What does it do again?
+
+        article
+          h1 Performance Boost
+          p.sub If the function component renders the<br>same result it will skip rendering
+
+        article
+          h1 Wrap your class
+          p.sub export default React.memo
+
+        article
+          h1 It will save<br>the results
+          p.sub For shallow comparison
+
+        article
+          h1 You can control the comparison
+
+        article
+          img(src='./images/screenshots/Memo.png')
+
+        article
+          .grid
+            .item Context API
+            .item Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item Memo
+            .item.current Lazy
+            .item contextType
 
         article 
-          h1 Wes Bos Courses
-          a(href='https://wesbos.com/courses/') Wes Bos Courses
+          h1 Code<br>Splitting 
+          p.sub with suspense
+        
+        article
+          h1 Previously<br>done with<br>Webpack
 
         article
-          h1 React Router Training
-          a(href='https://reacttraining.com/react-router/') React Training
+          h1 Now it's<br>built in
+
+        article 
+          h1 Before
 
         article
-          h1 Advanced<br>React<br>Workshop
-          a(href='https://reach.tech/workshops') Workshop by Ryan Florence
+          img(src='./images/screenshots/Before_Lazy.png')
+
+        article 
+          h1 After
+
+        article 
+          img(src='./images/screenshots/After_Lazy.png')
+
+        article
+          p This will automatically load<br>the bundle containing the<br>OtherComponent when this<br>component gets rendered
+
+        article
+          h1 Cover your<br>base 
+          p.sub In case OtherComponent renders first
+
+        article
+          h1 Fallback<br>Component
+
+        article
+          img(src='./images/screenshots/Fallback.png')
+
+        article
+          h2 Fallback props accepts<br>any React Element
+
+        article
+          h1 You can wrap multiple components
+
+        article
+          img(src='./images/screenshots/Lazy_Multiple.png')
+
+        article
+          h1 Error Boundaries
+          p.sub In combination with lazy loading
+
+        article
+          img(src='./images/screenshots/Lazy_ErrorBoundaries.png')
+
+        article
+          h1 Lazy with<br>React Router
+
+        article
+          img(src='./images/screenshots/Lazy_React_Router.png')
+
+        article
+          h1 Warning
+          p.sub Not supported with Server-Side-Rendering yet
+
+        article
+          .grid
+            .item Context API
+            .item Fragments
+            .item Error Boundaries
+            .item Portals 
+            .item Memo
+            .item Lazy
+            .item.current contextType
+
+        article 
+          h1 Addition to Context API
+          p.sub Convenience API For Classes
+
+        article 
+          img(src='./images/screenshots/Context_Type.png')
+
+        article
+          h1 Be warned
+          p.sub Only works with single context currently
 
         article
           h1 Finished! 
+        
+        article
+          h1 Looks like<br>a lot of changes?
+          p.sub Don't worry
 
         article
           h1 Quote by Wes Bos
@@ -414,7 +480,13 @@ html
           p.sub They make our applications better!
 
         article
+          h1 Want more?
+          p.sub Read the ReactJS Blog. It contains all changes
+          p.sub Especially for v16.6 - Released 10/23/18
+          a(href='https://reactjs.org/blog/2018/10/23/react-v-16-6.html') React V16.6
+
+        article
           h1 I hope this<br>was useful!
-          p.sub Any questions?
+          p.sub Feel free to ask questions
       script(src='prism.js' data-manual)
       script(src='./custom-highlight.js')
